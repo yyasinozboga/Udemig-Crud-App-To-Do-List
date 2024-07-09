@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Colors */
+:root {
+  --main-bg-color: #f1f5f8;
+  --input-bg-color: #e4f0f9;
+  --addBtn-bg-color: #a5d6f8;
+  --addBtn-hover-bg-color: #49a6e9;
+  --item-hover-bg-color: #f1f5f8;
+  --editBtn-color: #25bb32;
+  --editBtn-hover-color: #219b2b;
+  --deleteBtn-color: #e66b6b;
+  --deleteBtn-hover-color: #bb2525;
+  --clearBtn-color: #bb2525;
+  --clearBtn-hover-color: #e66b6b;
+  --alertSuccess-bg-color: #d4edda;
+  --alertSuccess-color: #155724;
+  --alertDanger-bg-color: #f8d7da;
+  --alertDanger-color: #721c24;
+  --main-transition: all 0.3s ease;
+}
+
+/* Utils */
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--main-bg-color);
+}
+
+button,
+input {
+  border: none;
+  font-size: 16px;
+}
+
+/* Item Container */
+.item-container {
+  visibility: hidden;
+}
+
+/* show */
+.show {
+  visibility: visible;
+}
+
+/* Alert */
+.alert {
+  border-radius: 5px;
+  width: 250px;
+  height: 40px;
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
+}
+
+.alert-success {
+  background-color: var(--alertSuccess-bg-color);
+  color: var(--alertSuccess-color);
+}
+
+.alert-danger {
+  background-color: var(--alertDanger-bg-color);
+  color: var(--alertDanger-color);
+}
+
+.alert-info {
+  background-color: var(--addBtn-bg-color);
+  color: var(--addBtn-hover-bg-color);
+}
+
+/* Container */
+.container {
+  background-color: white;
+  border-radius: 12px;
+  width: 90vw;
+  max-width: 560px;
+  margin: 50px auto 0;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: var(--main-transition);
+}
+
+.container:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Form */
+.form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  flex: 1 0 auto;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: var(--input-bg-color);
+}
+
+.form-input:focus {
+  outline-color: blue;
+}
+
+.form-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  flex: 0 0 80px;
+  padding: 10px;
+  background-color: var(--addBtn-bg-color);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.form-btn:hover {
+  background-color: var(--addBtn-hover-bg-color);
+  color: white;
+}
+
+/* Item List */
+.item-list {
+  margin: 20px 0;
+}
+
+/* Item */
+.item {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: var(--main-transition);
+}
+
+.item:hover {
+  background-color: var(--item-hover-bg-color);
+}
+
+/* Item Buttons */
+.item-edit-btn,
+.item-delete-btn,
+.item-clear-btn {
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.item-edit-btn {
+  margin-right: 10px;
+  color: var(--editBtn-color);
+}
+
+.item-edit-btn:hover {
+  color: var(--editBtn-hover-color);
+}
+
+.item-delete-btn {
+  color: var(--deleteBtn-color);
+}
+
+.item-delete-btn:hover {
+  color: var(--deleteBtn-hover-color);
+}
+
+.item-clear-btn {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--clearBtn-color);
+}
+
+.item-clear-btn:hover {
+  color: var(--clearBtn-hover-color);
+}
